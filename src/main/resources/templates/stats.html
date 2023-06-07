@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Статистика</title>
+</head>
+
+<head th:insert="blocks/head :: head"></head>
+
+<body class="d-flex flex-column min-vh-100">
+<div th:insert="blocks/nav :: nav"></div>
+<main class="page product-page">
+    <section class="clean-block clean-product dark">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info">Статистика</h2>
+            </div>
+            <div class="block-content">
+                <div class="row"><div class="col"><p class="lead">Семейное положение</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${maritals}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+                <div class="row"><div class="col"><p class="lead">Место рождения</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${origins}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+                <div class="row"><div class="col"><p class="lead">Гражданство</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${citizenships}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+                <div class="row"><div class="col"><p class="lead">Пенсионер</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${retirees}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+                <div class="row"><div class="col"><p class="lead">Военнообязанный</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${conscripteds}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+                <div class="row"><div class="col"><p class="lead">Инвалидность</p></div></div>
+                <div class="row">
+                    <div th:each="i : ${disabilities}" class="col-auto">
+                        <p th:text="${i.getKey() + ' - ' + i.getValue()}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:insert="blocks/footer :: footer" class="page-footer dark mt-auto"></footer>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="/js/vanilla-zoom.js"></script>
+<script src="/js/theme.js"></script>
+</body>
+
+</html>

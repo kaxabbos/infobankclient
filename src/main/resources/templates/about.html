@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Мы на карте</title>
+</head>
+
+<head th:insert="blocks/head :: head"></head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<div th:insert="blocks/nav :: nav"></div>
+
+<main class="page catalog-page">
+    <section class="clean-block clean-catalog dark">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info">Мы на карте</h2>
+            </div>
+            <div class="content" style="padding: 20px">
+                <div class="row">
+                    <div class="col-12" align="justify"><p class="lead">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Aliquam architecto eveniet minus nesciunt! Assumenda est et explicabo hic
+                        maxime molestiae natus quasi quisquam quod sint. Deleniti et explicabo sunt unde.</p></div>
+                    <div class="col-12" align="justify"><p class="lead">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Accusamus dignissimos ducimus eos eum iste minima pariatur praesentium quam
+                        saepe sapiente. Aspernatur dignissimos exercitationem ipsa neque pariatur rerum sapiente
+                        tempore, voluptatem.</p></div>
+                    <div class="col-12" align="justify"><p class="lead">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Enim illum omnis placeat quae quidem quod? Autem consectetur illum labore
+                        magni, mollitia nam numquam optio quod repudiandae temporibus totam vel veritatis!</p></div>
+                    <div class="col-12" align="center">
+                        <iframe allowfullscreen="" frameborder="0" loading="lazy"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGz6HJDVY9fht_jGVCprEpRCwZ8PSsqhc&amp;q=Minsk&amp;zoom=11"
+                                width="75%" height="500"
+                                style="box-shadow: 0 0 6px;border-radius: 5px;border: 1px solid rgb(255,255,255);width: 100%;margin-top: 15px;height: 500px;"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer th:insert="blocks/footer :: footer" class="page-footer dark mt-auto"></footer>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="/js/vanilla-zoom.js"></script>
+<script src="/js/theme.js"></script>
+
+</body>
+
+</html>
